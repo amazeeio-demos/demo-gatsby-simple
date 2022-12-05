@@ -19,7 +19,7 @@ environments:
   dev:
     types:
       node: node
-      nginx: nginx
+      nginx: none
 
   main:
     types:
