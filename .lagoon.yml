@@ -1,5 +1,5 @@
 docker-compose-yaml: docker-compose.yml
-project: demo-lagoon-gatsby-simple
+project: demo-gatsby-simple
 
 tasks:
   pre-rollout:
