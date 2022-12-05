@@ -19,11 +19,11 @@ environments:
   dev:
     types:
       node: node
-      nginx: none
+      nginx: nginx
 
   main:
     types:
-      node: none
+      node: node
       nginx: nginx
     cronjobs:
       - name: Demo Cron
