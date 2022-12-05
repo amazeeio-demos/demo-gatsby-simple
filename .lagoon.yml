@@ -1,1 +1,33 @@
 docker-compose-yaml: docker-compose.yml
+project: demo-lagoon-gatsby-simple
+
+tasks:
+  pre-rollout:
+    - run:
+        name: Pre-rollout example
+        command: echo "Hello world"
+        service: node
+
+  post-rollout:
+    - run:
+        name: Post-rollout example
+        command: echo "Hello world"
+        service: node
+
+
+environments:
+  dev:
+    types:
+      node: node
+      nginx: none
+
+  main:
+    types:
+      node: none
+      nginx: nginx
+    cronjobs:
+      - name: Demo Cron
+        schedule: "M */4 * * *"
+        command: echo "Cron demo"
+        service: node
+
